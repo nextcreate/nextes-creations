@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.section`
-    height:100vh;
+    min-height:100%;
     width:100vw;
 `
 

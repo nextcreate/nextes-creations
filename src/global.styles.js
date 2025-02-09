@@ -13,11 +13,12 @@ export const PageHeader = styled.header`
     background-color:#${colors.brown};  
     display:flex;
     flex-direction:column;
+    color:#fff;
 `
 
 export const basePageContainer = css`
     width:100vw;
-    height:75vh;
+    min-height:65vh;
     background-color:#${colors.white};
     top:125px;
 `
