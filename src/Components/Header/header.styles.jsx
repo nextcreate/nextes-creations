@@ -13,6 +13,11 @@ export const HeaderContainer = styled.header`
 	justify-content: flex-end;
 	align-items: stretch;
 	align-content: stretch;
+
+    a {
+        color:#000;
+        text-decoration:none;
+    }
 `;
 
 export const HideSvg = styled.div`
@@ -97,7 +102,7 @@ export const ContactBar = styled.div`
     position:absolute;
     top:0px;
     height:100px;
-    width:100%;
+    width:90vw;
     // background-color:blue;
     display:flex;
     justify-content: flex-end;

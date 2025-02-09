@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import { colors,basePageContainer } from "../../global.styles";
+
+const { white } = colors
 
 export const ShoppingCartContainer = styled.section`
-    width:100vw;
-    height:75vh;
-    background-color:blue;
-    position:absolute;
-    top:125px;
+    ${basePageContainer}
 `

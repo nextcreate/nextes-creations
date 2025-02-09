@@ -1,11 +1,12 @@
 import { ShoppingCartContainer } from "./cart.styles";
+import { PageHeader } from "../../global.styles";
 
 const ShoppingCart = () => {
     return (
         <ShoppingCartContainer>
-            <h1>
-                Shopping cart
-            </h1>
+            <PageHeader>
+                <h2>cart</h2>
+            </PageHeader>
         </ShoppingCartContainer>
     )
 }

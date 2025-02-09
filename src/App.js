@@ -1,13 +1,13 @@
-import './App.css';
 import Header from './Components/Header/header.component';
+import { AppContainer } from './app.styles';
 import routes from './routes';
 
 function App() {
   return (
-    <div className="App">
+    <AppContainer>
       <Header />
       {routes}
-    </div>
+    </AppContainer>
   );
 }
 
