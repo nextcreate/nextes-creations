@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
 import { useState } from "react"
-import { HeroContainer,ContactBar } from "./hero.styles"
-import { DesktopMenu,BaseNavBar,HideSvg } from "./hero.styles"
+import { HeaderContainer,ContactBar } from "./header.styles"
+import { DesktopMenu,BaseNavBar,HideSvg } from "./header.styles"
 import { BaseButton } from "../Inputs/input.styles"
 import { Hamburger } from "../SVG/Hamburger"
 import { Close } from "../SVG/Close"
 
-const Hero = () => {
+const Header = () => {
 
     const [state,setState] = useState({
         menuOpen:false
@@ -15,7 +15,7 @@ const Hero = () => {
     const {menuOpen } = state;
 
     return (
-        <HeroContainer>
+        <HeaderContainer>
             <ContactBar>
                 <h2 style={{position:'absolute',left:'40px'}}><Link to="/">Nextes Creations</Link></h2>
                 <BaseButton>Contact us</BaseButton>
@@ -29,12 +29,8 @@ const Hero = () => {
                 </DesktopMenu>
             </BaseNavBar>
             <HideSvg onClick={() => {setState({...state, menuOpen:!menuOpen})}}>{menuOpen ? <Close/> : <Hamburger/>}</HideSvg>
-            {/* <HeroImage>
-            <h1>Handcrafted Furnishings Made for You</h1>
-            <p>text inserted here</p>
-            </HeroImage> */}
-        </HeroContainer>
+        </HeaderContainer>
     )
 };
 
-export default Hero
+export default Header

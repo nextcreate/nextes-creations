@@ -1,5 +1,5 @@
 import { HomeContainer } from "./home.styles";
-import { HeroImage } from "../Hero/hero.styles";
+import { HeroImage } from "./home.styles";
 
 const Home = () => {
     return (
