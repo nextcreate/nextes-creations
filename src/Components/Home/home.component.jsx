@@ -15,11 +15,11 @@ const Home = () => {
         })
     },[])
 
-    // const mappedStuff = state.stuff.map((el,i) => {
-    //     return (
-    //         <img src={el.img} />
-    //     )
-    // })
+    const mappedStuff = state.stuff.map((el,i) => {
+        return (
+            <img src={el.img} />
+        )
+    })
 
     return (
         <HomeContainer>
@@ -27,7 +27,7 @@ const Home = () => {
                 <h1>Handcrafted Furnishings Made for You</h1>
                 <p>text inserted here</p>
             </HeroImage>
-            {/* {mappedStuff} */}
+            {mappedStuff}
         </HomeContainer>
     )
 }
