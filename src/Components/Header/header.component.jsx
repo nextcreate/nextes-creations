@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min"
 import { useState } from "react"
-import { HeaderContainer,ContactBar } from "./header.styles"
+import { HeaderContainer,ContactBar,NextesCreationsText,LogoBox } from "./header.styles"
 import { DesktopMenu,BaseNavBar,HideSvg } from "./header.styles"
 import { BaseButton } from "../Inputs/input.styles"
 import { Hamburger } from "../SVG/Hamburger"
@@ -18,7 +18,10 @@ const Header = () => {
     return (
         <HeaderContainer>
             <ContactBar>
-                <h2 style={{position:'absolute',left:'40px'}}><Link to="/">Nextes Creations</Link></h2>
+                <LogoBox>
+                    <h1><Link to="/">Nextes Creations</Link></h1>
+                    <strong>Hand Crafted Goods</strong>
+                </LogoBox>
                 {/* <BaseButton>Contact us</BaseButton> */}
                 <Link to="/cart">
                     <ShopCart 
@@ -29,9 +32,9 @@ const Header = () => {
             </ContactBar>
             <BaseNavBar>
                 <DesktopMenu menuOpen={menuOpen}>
-                    <li src="#"><Link to="/cart">about</Link></li>
-                    <li src="#"><Link to="/">get a quote</Link></li>
-                    <li src="#"><Link to="/">Handcrafted Furnishings</Link></li>
+                    <li src="#"><Link to="/cart">About</Link></li>
+                    <li src="#"><Link to="/">Shop</Link></li>
+                    <li src="#"><Link to="/">Contact us</Link></li>
                 </DesktopMenu>
             </BaseNavBar>
             <HideSvg onClick={() => {setState({...state, menuOpen:!menuOpen})}}>{menuOpen ? <Close/> : <Hamburger/>}</HideSvg>

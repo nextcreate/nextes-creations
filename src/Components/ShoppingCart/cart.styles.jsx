@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { colors,basePageContainer } from "../../global.styles";
-
-const { white } = colors
+import { basePageContainer,typeFace } from "../../global.styles";
 
 export const ShoppingCartContainer = styled.section`
     ${basePageContainer}
+    ${typeFace}
 `

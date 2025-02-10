@@ -7,6 +7,8 @@ export const colors= {
     tan:'F3EED9'   
 }
 
+export const typeFace = css`font-family: "Agu Display", serif;`
+
 export const PageHeader = styled.header`
     height:300px;
     width:100vw;
