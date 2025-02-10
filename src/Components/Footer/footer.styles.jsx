@@ -8,6 +8,8 @@ export const FooterContainer = styled.footer`
     background-color:#${brown};
     position:relative;
     bottom:0;
+    display:flex;
+    flex-direction:column-reverse;
 `
 
 export const FooterBottom = styled.div`
@@ -15,5 +17,6 @@ export const FooterBottom = styled.div`
     width:100vw;
     height:100px;
     display:flex;
-    flex-direction:column-reverse;
+    justify-content:center;
+    align-items:center;
 `

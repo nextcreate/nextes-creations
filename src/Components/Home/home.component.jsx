@@ -1,23 +1,35 @@
 import { useEffect,useState } from "react";
-import { HomeContainer } from "./home.styles";
+import { HomeContainer,ProductDisplay } from "./home.styles";
 import { HeroImage } from "./home.styles";
+import Product from "./productcard.component";
 import data from './../data'
+
+const testData = [
+    {image:'test'},
+    {image:'test'},
+    {image:null},
+    {image:null},
+    {image:null},
+]
 
 const Home = () => {
 
     const [state,setState] = useState({
-        stuff:[]
+        stuff:[],
+        moreStuff:[]
     })
 
     useEffect(() => {
         setState({
-            ...state,stuff:data
+            ...state,
+            stuff:data,
+            moreStuff:testData
         })
     },[])
 
     const mappedStuff = state.stuff.map((el,i) => {
         return (
-            <img src={el.img} />
+            <Product key={i} props={el} />
         )
     })
 
@@ -26,7 +38,10 @@ const Home = () => {
             <HeroImage>
                 <h1>Handcrafted Furnishings Made for You</h1>
             </HeroImage>
-            {/* {mappedStuff} */}
+            <h2>Ready-To-Order Handmade Options</h2>
+            <ProductDisplay>
+                {mappedStuff}
+            </ProductDisplay>
         </HomeContainer>
     )
 }

@@ -4,7 +4,11 @@ import { typeFace } from "../../global.styles";
 export const HomeContainer = styled.section`
     min-height:100%;
     width:100vw;
-`
+
+    h2 {
+        ${typeFace}
+    }
+`;
 
 export const HeroImage = styled.div`
     width:100vw;
@@ -23,7 +27,8 @@ export const HeroImage = styled.div`
     p {
         color:white;
     }
-            h1 {
+
+    h1 {
         ${typeFace}
         font-weight: 400;
         font-size: calc(10px + 2vmin);
@@ -33,4 +38,46 @@ export const HeroImage = styled.div`
         font-size: calc(35px + 2vmin);
         text-shadow: #000000 3px 2px;
     }
+`;
+
+export const ProductDisplay = styled.div`
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    // flex-direction: row;
+	// align-items: stretch;
+	// align-content: stretch;
+`;
+
+export const ProductCard = styled.div`
+    width:300px;
+    height:360px;
+    border-radius:10px;
+    border solid 1px #555;
+    margin:10px;
+    background-color:#fff;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-end;
+    ${typeFace}
+    color:#555;
+
+    @media (max-width:641px) {
+        width:90%;
+    }
+
+    img {
+        height:200px;
+        width:200px;
+        border-radius:10px;
+        margin:10px;
+        position:absolute;
+        left:0;
+        top:0;
+    }
+
+    button {${typeFace}}
 `;
