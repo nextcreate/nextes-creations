@@ -25,7 +25,6 @@ const Home = () => {
         <HomeContainer>
             <HeroImage>
                 <h1>Handcrafted Furnishings Made for You</h1>
-                {/* <p>text inserted here</p> */}
             </HeroImage>
             {/* {mappedStuff} */}
         </HomeContainer>
