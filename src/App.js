@@ -1,17 +1,18 @@
-import './App.css';
-import Hero from './Components/Hero/hero.component';
-import ShoppingCart from './Components/ShoppingCart/cart.component';
-import Home from './Components/Home/home.component';
+import Header from './Components/Header/header.component';
+import Footer from './Components/Footer/footer.component';
+import { AppContainer } from './app.styles';
+import { RouteContainer } from './app.styles';
 import routes from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Hero />
-      {routes}
-      {/* <Home /> */}
-      {/* <ShoppingCart /> */}
-    </div>
+    <AppContainer>
+      <Header />
+      <RouteContainer>
+        {routes}
+      </RouteContainer>
+      <Footer />
+    </AppContainer>
   );
 }
 
